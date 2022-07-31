@@ -1,5 +1,7 @@
 #!/bin/bash
 #branch development
+#Search info about Autonomous System from list file
+
 
 TMP_FILE=`mktemp`
 
