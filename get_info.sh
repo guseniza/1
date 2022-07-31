@@ -2,6 +2,7 @@
 
 TMP_FILE=`mktemp`
 
+#AS block list
 list_as='as_fck.src'
 
 echo "aut-num;org;org-name;descr"
@@ -16,5 +17,6 @@ do
 	org=`cat "$TMP_FILE" | awk -F ':' '{ if ($1 == "org") {print $2} }' | sed 's/^ *//g'`
 
 	echo "$as_obj;$org;$org_name;$descr"
+	echo  "======END========"
 
 done < $list_as
